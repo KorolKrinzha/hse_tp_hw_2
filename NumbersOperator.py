@@ -20,9 +20,12 @@ class NumbersOperator:
                 numbers_list = [int(i) for i in numbers_list]
                 return numbers_list 
         except:
-            raise Exception ('Файл не найден или записан некорректно')
+            raise TypeError
         return
     
+    def getNumberListSize(self):
+        numbers_list = self.__getNumbersFromFile()
+        return len(numbers_list)
     # find maximum
     def max(self) -> int:
         numbers_list = self.__getNumbersFromFile()
