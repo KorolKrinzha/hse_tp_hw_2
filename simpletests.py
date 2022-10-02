@@ -17,13 +17,13 @@ class SimpleTests(unittest.TestCase):
     
     # Check when given wrong type 
     def test_type(self):
-        test_object_2 = NumbersOperator('test_2.txt')
+        test_object_2 = NumbersOperator('tests_txt/test_2.txt')
         with self.assertRaises(TypeError):
             test_object_2.sum()
     
     # Check when given wrong filename
     def test_filename(self):
-        test_object_3 = NumbersOperator('test_unknown.txt')
+        test_object_3 = NumbersOperator('tests_txt/test_unknown.txt')
         with self.assertRaises(TypeError):
             test_object_3.sum()
     
@@ -33,25 +33,25 @@ class SimpleTests(unittest.TestCase):
     # Tests for max
     # check usual list of characters
     def test_max_regular(self):
-        test_object_1 = NumbersOperator('test_1.txt')
+        test_object_1 = NumbersOperator('tests_txt/test_1.txt')
         self.assertEqual(test_object_1.max(), 7, f'Test is passed. Amount of numbers: {test_object_1.getNumberListSize()}')
         
     # Tests for min
     # Check usual list of characters
     def test_min_regular(self):
-        test_object_1 = NumbersOperator('test_1.txt')
+        test_object_1 = NumbersOperator('tests_txt/test_1.txt')
         self.assertEqual(test_object_1.min(),1, f'Test is passed. Amount of numbers: {test_object_1.getNumberListSize()}')
         
     
     # Tests for sum
     # check usual list of characters
     def test_sum_regular(self):
-        test_object_1 = NumbersOperator('test_1.txt')
+        test_object_1 = NumbersOperator('tests_txt/test_1.txt')
 
         self.assertEqual(test_object_1.sum(), 28, f'Test is passed. Amount of numbers: {test_object_1.getNumberListSize()}')
         
     def test_mult_regular(self):
-        test_object_1 = NumbersOperator('test_1.txt')
+        test_object_1 = NumbersOperator('tests_txt/test_1.txt')
         self.assertEqual(test_object_1.mult(), 5040, f'Test is passed. Amount of numbers: {test_object_1.getNumberListSize()}')
         
         
