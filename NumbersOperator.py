@@ -20,7 +20,7 @@ class NumbersOperator:
                 numbers_list = [int(i) for i in numbers_list]
                 return numbers_list 
         except:
-            raise TypeError
+            raise TypeError('Файл не существует или в нем неправильные данные.')
         return
     
     def getNumberListSize(self):
