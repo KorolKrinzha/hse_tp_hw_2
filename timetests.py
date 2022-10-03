@@ -46,3 +46,15 @@ plt.ylabel('Время выполнения программы, сек')
 plt.grid()
 # show the plot
 plt.show()
+
+# The results are
+# 10 numbers - 0.9738186000004134 seconds,
+# 50 numbers - 1.0879238999996232 seconds,
+# 100 numbers - 1.2151348000006692 seconds,
+# 1000 numbers - 3.916505799999868 seconds,
+# 10000 numbers - 33.50335389999964 seconds,
+# 100000 numbers - 301.12019899999996 seconds,
+# 500000 numbers - 1666.0187752000002 seconds
+
+# The plot can be seen in imgs pholder
+# The prettier version of the code can be seen in Jupyter Notebook file TimeTests
