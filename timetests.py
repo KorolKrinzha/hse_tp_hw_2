@@ -2,53 +2,47 @@ import timeit
 import numpy as np
 from matplotlib import pyplot as plt
 from NumbersOperator import NumbersOperator
-number_of_files = 3
+
+# Amount of files that store numbers for the tests
+number_of_files = 7
+# because of template names, we store all the names in a list via simple script 
 testfiles = ['./tests_txt/timetest_'+str(i)+'.txt' for i in range (1,number_of_files+1)]
 
-numbers_list = [ NumbersOperator(filename) for filename in testfiles]
+
+
+# List with NumberOperator objects for each file
+numbers_list = [ NumbersOperator(filename) for filename in testfiles] 
+# Amount of numbers in each file (Y-AXIS)
 numbers_list_size = [operator.getNumberListSize() for operator in numbers_list]
 
 
-    
-# print(numbers_list_size)
-# print(sum_timetest_0(numbers_list))
-# sum_timetest_0(numbers_list)
-stmt = ''
+
+# Thats the way to use timeit module
+# It is a setup for a function which we will then measure
 setup = """ 
 from NumbersOperator import NumbersOperator
-testfiles = ['./tests_txt/timetest_1.txt','./tests_txt/timetest_2.txt', './tests_txt/timetest_3.txt']
+number_of_files = 7
+testfiles = ['./tests_txt/timetest_'+str(i)+'.txt' for i in range (1,number_of_files+1)]
 numbers_list = [ NumbersOperator(filename) for filename in testfiles]
 """
 
-# sum_timetest_0=  """
-# numbers_list[0].sum()
-# """
-# sum_timetest_1=  """
-# numbers_list[1].sum()
-# """
-# sum_timetest_2=  """
-# numbers_list[2].sum()
-# """
-sum_time_list = []
-for i in range(len(numbers_list)):
-    sum_timetest = f"numbers_list[{i}].sum()"
-    sum_time = timeit.timeit(stmt=sum_timetest, setup=setup, number=10000)
-    sum_time_list.append(sum_time)
 
-plt.xlabel('Число данных')
-plt.ylabel('Время исполнения программы')
-
-plt.plot(sum_time_list, numbers_list_size, color='r', label='Функция суммы')
-
+# We will measure time for min function
 min_time_list = []
-for i in range(len(numbers_list)):
+for i in range(len(testfiles)):
+    # Measure time for each time we use min() method     
     min_timetest = f"numbers_list[{i}].min()"
     min_time = timeit.timeit(stmt=min_timetest, setup=setup, number=10000)
+    # Write down the time to the list (X-AXIS)      
     min_time_list.append(min_time)
-    
-plt.plot(min_time_list, numbers_list_size, color='g', label='Функция минимума')
 
+
+# Matplotlib is a popular module for displaying data
+# In this case we will use plot type of diagram
+plt.plot(min_time_list, numbers_list_size, color='r', label='Функция минимума')
+# styling a bit
+plt.xlabel('Количество чисел в файле') 
+plt.ylabel('Время выполнения программы, сек')
+plt.grid()
+# show the plot
 plt.show()
-
-# plt.plot(x, y, color='r', label='sin')
-# plt.show()

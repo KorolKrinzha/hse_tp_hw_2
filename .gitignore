@@ -1,3 +1,5 @@
 __pycache__
 .idea
 .vscode
+tests_txt/timetest_*.txt
+.ipynb_checkpoints
