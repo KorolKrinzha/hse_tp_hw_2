@@ -28,7 +28,11 @@ class SimpleTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             test_object_3.sum()
     
-    
+    # Check NumbersOperator class object to str
+    def test_str(self):
+        test_object_3 = NumbersOperator('tests_txt/test_1.txt')
+        self.assertEqual(str(test_object_3), "Оператор чисел из локального файла tests_txt/test_1.txt",
+                         f'Test is passed. Amount of numbers: {test_object_3.getNumberListSize()}')
     # We have set tests for handling errors. Now we need to go through each operation
     
     # Tests for max
