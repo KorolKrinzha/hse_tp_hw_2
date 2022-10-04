@@ -6,7 +6,7 @@ class NumbersOperator:
         self.__filename= filename
     
     def __str__(self):
-        return f"Оператор чисел из локального файла{self.__filename}"
+        return f"Оператор чисел из локального файла {self.__filename}"
     
     # function to read numbers out of file is made private 
     # It is because user of the class is not required to know the numbers themselves
@@ -21,7 +21,7 @@ class NumbersOperator:
                 return numbers_list 
         except:
             raise TypeError('Файл не существует или в нем неправильные данные.')
-        return
+        
     
     def getNumberListSize(self):
         numbers_list = self.__getNumbersFromFile()

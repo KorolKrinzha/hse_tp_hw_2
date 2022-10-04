@@ -1,0 +1,18 @@
+name: CICD-DRAFT
+
+on:
+  push:
+    branches: [test]
+  pull_request:
+    branches: [main, master, test]
+
+jobs:
+  on_build_actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: cd $GITHUB_WORKSPACE
+
+      - name: Run Tests
+        run: python -m unittest discover -v . "test_*.py"
