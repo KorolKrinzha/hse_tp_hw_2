@@ -29,7 +29,7 @@ class SimpleTests(unittest.TestCase):
             test_object_3.sum()
     
     
-    # We have set tests for handling errors. Now we need to go throuh each operation
+    # We have set tests for handling errors. Now we need to go through each operation
     
     # Tests for max
     # check usual list of numbers

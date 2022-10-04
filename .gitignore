@@ -3,3 +3,8 @@ __pycache__
 .vscode
 tests_txt/timetest_*.txt
 .ipynb_checkpoints
+# statistics for coverage module
+.coverage
+htmlcov
+# commands written on seminars
+commands_cheatsheet.txt
