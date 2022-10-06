@@ -2,7 +2,7 @@ name: CICD-DRAFT
 
 on:
   push:
-    branches: [test]
+    branches: [test, main, master]
   pull_request:
     branches: [main, master, test]
 
