@@ -9,6 +9,19 @@
 ![Test Status](https://github.com/KorolKrinzha/hse_tp_hw_2/actions/workflows/TestNumbersOperator.yml/badge.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
+## Интеграция CI и Telegram
+
+Для интеграции с мессенджерами я воспользовался готовым решением - [телеграм-ботом GitHubBot](https://t.me/GitHubBot)
+
+Для работы с ним необходимо предоставить доступ к репозиториям разработчика, а затем выбрать проект, о котором пользователь хочет получать информацию
+
+Я выбрал текущий репозиторий, как показано на скриншоте:
+
+![Скриншот 1](https://github.com/KorolKrinzha/hse_tp_hw_2/blob/main/imgs/screenshot_1.png)
+
+Далее новые коммиты в репозитории сопровождались сообщениями от телеграм-бота. Теперь я всегда знаю, что происходит в моем проекте!
+![Скриншот 2](https://github.com/KorolKrinzha/hse_tp_hw_2/blob/main/imgs/screenshot_2.png)
+
 ## Технологический стек
 
 - Python - ЯП
