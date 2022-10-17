@@ -41,7 +41,7 @@ jobs:
           message: |
             ${{ github.actor }} created commit:
             Commit message: ${{ github.event.commits[0].message }}
-            Tests failed
+            TESTS FAILED!!!
 
             Repository: ${{ github.repository }}
 
