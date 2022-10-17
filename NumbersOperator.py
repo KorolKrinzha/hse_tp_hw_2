@@ -45,6 +45,6 @@ class NumbersOperator:
         result = 1
         for n in numbers_list:
             result*=n
-        return result
+        return result 
     
         
