@@ -54,7 +54,7 @@ class SimpleTests(unittest.TestCase):
     # check usual list of numbers
     def test_max_regular(self):
         test_object_1 = NumbersOperator('tests_txt/test_1.txt')
-        self.assertEqual(test_object_1.max(), 7-1, f'Test is passed. Amount of numbers: {test_object_1.getNumberListSize()}')
+        self.assertEqual(test_object_1.max(), 7, f'Test is passed. Amount of numbers: {test_object_1.getNumberListSize()}')
         
     # check big list of numbers
     def test_max_big(self):
